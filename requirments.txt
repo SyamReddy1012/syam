@@ -1,0 +1,11 @@
+psycopg2-binary>=2.9.9
+deepface>=0.0.90
+retina-face>=0.0.17
+ultralytics>=8.0.0
+networkx>=3.0
+geopandas>=0.14.0
+shapely>=2.0.0
+folium>=0.15.0
+opencv-python>=4.8.0
+numpy>=1.24.0
+ipython>=8.0.0
