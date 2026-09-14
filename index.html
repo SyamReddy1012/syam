@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Face Recognition Search & Rescue</title>
+  <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="navbar">
+      <h1>Missing Person Locator</h1>
+      <span class="status-indicator">Local Edge System</span>
+    </header>
+
+    <main class="grid">
+      <section class="card">
+        <h2>Case Registration</h2>
+        <form id="regForm">
+          <label>Full Name</label>
+          <input type="text" placeholder="Missing person's name" required>
+          <label>Last Worn Clothing</label>
+          <input type="text" placeholder="e.g. Red hoodie, dark jeans" required>
+          <label>Coordinates (Lat, Lon)</label>
+          <input type="text" placeholder="15.8285, 78.0380" required>
+          <label>Reference Photo</label>
+          <input type="file" accept="image/*" required>
+          <button type="button">Store in pgvector</button>
+        </form>
+      </section>
+
+      <section class="card">
+        <h2>Spatial Dispatch</h2>
+        <div class="meta-box">
+          <p><strong>Nearest NGO:</strong> NGO_Station_RedCross</p>
+          <p><strong>Travel Time:</strong> 6.7 mins</p>
+          <p><strong>Containment Buffer:</strong> 350 meters</p>
+        </div>
+        <iframe src="../rescue_dispatch_map.html" class="map-view"></iframe>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
